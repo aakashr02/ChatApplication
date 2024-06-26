@@ -35,6 +35,7 @@ The performance of the servers before and after logging is as follows -
 The IOWait Percentage of the CPU was reduced by changing the values for the VM_Dirty_Ratio from system default value of 20 to new value of 60 and VM_Dirty_Background_Ratio from system default value of 10 to new value of 20.
 
 **Dirty Ratio** - permitted amount of dirty pages in memory after which the process will itself write it back to disk.
+
 **Dirty Background Ratio** - permitted amount of dirty pages after which the 'flush' thread will write it to disk, so that the processes can continue executing.
 
 ![image](https://github.com/aakashr02/ChatApplication/assets/87864552/d8fbab58-b5a2-427c-806f-465ab749ab0f)
