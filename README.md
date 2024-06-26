@@ -13,7 +13,7 @@ In this approach, multiple clients are served simultaneously - a new thread is s
 In this approach, multiple clients are served simultaneously - a new child process is created for every new client. However, there is a cap set on the number of threads created (here MAX_THREADS is set to 16 as there are 16 cores). The other clients wait in the queue and are removed if the timeout is reached. 
 
 
-## Archival and Logging Performance
+## Performance before and after Logging (Disk IO)
 The performance of the servers before and after logging is as follows - 
 
 **Iterative Serving**
