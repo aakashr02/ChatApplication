@@ -18,17 +18,17 @@ The performance of the servers before and after logging is as follows -
 
 **Iterative Serving**
 
-![image](https://github.com/aakashr02/ChatApplication/assets/87864552/956cc4ce-a7cf-4adb-8d8b-43df9729195b)
+![image](https://github.com/aakashr02/ChatApplication/assets/87864552/9fc54b71-3fdd-4997-bf22-e08dab0f8f77)
 
 
 **MultiThreading**
 
-![image](https://github.com/aakashr02/ChatApplication/assets/87864552/3203c0fe-4d2d-4889-b4b8-e3b6d9d19494)
+![image](https://github.com/aakashr02/ChatApplication/assets/87864552/55581462-0534-4f94-95d8-684161993a50)
 
 
 **Forking**
 
-![image](https://github.com/aakashr02/ChatApplication/assets/87864552/0ceac787-a7c8-4df0-8214-33f43e6a2ff4)
+![image](https://github.com/aakashr02/ChatApplication/assets/87864552/862b2390-0d36-47b1-911f-bed030e31717)
 
 
 ## Improvements to Disk IO
