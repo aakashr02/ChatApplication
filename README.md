@@ -40,4 +40,4 @@ The IOWait Percentage of the CPU was reduced by changing the values for the VM_D
 
 ![image](https://github.com/aakashr02/ChatApplication/assets/87864552/d8fbab58-b5a2-427c-806f-465ab749ab0f)
 
-
+There is not much difference in write_requests/s, KB_written/s, write_requests_merged/s and write_await parameters.
