@@ -1,6 +1,3 @@
-// #ifndef MY_HEADER_H
-// # define MY_HEADER_H
-
  #include <arpa/inet.h>
  #include <time.h>
 
@@ -26,22 +23,9 @@ float averageRating ;
 
 
 
-// int handle_client(void *);
-
-
-
-// void *drop_old_connections(void *);
-
-// void startServer();
 
 
 void addClientToQueue(int , struct sockaddr_in);
-
-// void *iterative_client_handler(void *);
-
-// void *forking_client_handler(void *);
-
-// void *multithread_client_handler(void *);
 
 void startMultiThreadServer();
 
@@ -49,4 +33,3 @@ void startForkingServer();
 
 void startIterativeServer();
 
-// #endif
