@@ -30,6 +30,8 @@ In this approach, multiple clients are served simultaneously - a new child proce
 
 **Server_A.log** - Sample log file
 
+**Aggregate_JMeter_Results.xlsx** - Contains the load testing results conducted using Apache JMeter tool
+
 ## Performance before and after Logging (Disk IO)
 The performance of the servers before and after logging is as follows - 
 
@@ -65,4 +67,8 @@ The IOWait Percentage of the CPU was reduced by changing the values for the VM_D
 ![image](https://github.com/aakashr02/ChatApplication/assets/87864552/d8fbab58-b5a2-427c-806f-465ab749ab0f)
 
 There is not much difference in write_requests/s, KB_written/s, write_requests_merged/s and write_await parameters.
+
+## Load Testing
+
+Apache JMeter was used to load test the 3 approaches. The application was stressed with 900 Clients with a ramp up time of 0.5s. Each client sent and received 1000 messages in 1s. The iterative-server appraoch gave a low throughput of 3 Requests/s while the forking and multithreading approaches gave a throughput of 18-19 Requests/s. For more detailed results refer the 'Aggregate_JMeter_Results.xlsx' file.
 
