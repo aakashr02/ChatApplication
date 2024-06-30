@@ -28,6 +28,7 @@ In this approach, multiple clients are served simultaneously - a new child proce
 
 **name.txt** - Holds the name of the server
 
+**Server_A.log** - Sample log file
 
 ## Performance before and after Logging (Disk IO)
 The performance of the servers before and after logging is as follows - 
