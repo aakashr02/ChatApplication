@@ -13,6 +13,22 @@ In this approach, multiple clients are served simultaneously - a new thread is s
 In this approach, multiple clients are served simultaneously - a new child process is created for every new client. The clients wait in the queue and are removed if the timeout is reached. 
 
 
+## Files and Description
+**server.h** - Contains the declarations for the functions and data that are common to the 3 approaches.
+
+**server.c** - Contains the implementation and logic for the function declarations in server.h
+
+**iterative_server.c** - Contains the main method, socket creation for the server and invokes methods to handle multiple clients iteratively.
+
+**forking_server.c** - Contains the main method, socket creation for the server and invokes methods to handle multiple clients using forking technique.
+
+**multithreaded_server.c** - Contains the main method, socket creation for the server and invokes methods to handle multiple clients using multithreading.
+
+**client.c** - Contains client side logic for socket creation and connection, sending and receiving messages.
+
+**name.txt** - Holds the name of the server
+
+
 ## Performance before and after Logging (Disk IO)
 The performance of the servers before and after logging is as follows - 
 
@@ -33,11 +49,12 @@ The performance of the servers before and after logging is as follows -
 
 ## Improvements to Disk IO
 
-The following methods are used to improve disk IO -
+The following methods are used to improve disk IO through source code-
 1. Buffering - The logs are stored in a buffer before they are written to the log file. This ensures that the logs remain in main memory and not every thread accesses the log file.
 2. Periodic Logging - The logs in the buffer are logged only periodically, and this reduces the number of write operations done otherwise.
 3. Multithreading - A separate thread apart from the worker threads is dedicated to write logs. The worker threads focus on serving the client.
 
+The following methods are used to improve disk IO through kernel parameters-
 The IOWait Percentage of the CPU was reduced by changing the values for the VM_Dirty_Ratio from system default value of 20 to new value of 60 and VM_Dirty_Background_Ratio from system default value of 10 to new value of 20.
 
 **Dirty Ratio** - permitted amount of dirty pages in memory after which the process will itself write it back to disk.
@@ -47,3 +64,4 @@ The IOWait Percentage of the CPU was reduced by changing the values for the VM_D
 ![image](https://github.com/aakashr02/ChatApplication/assets/87864552/d8fbab58-b5a2-427c-806f-465ab749ab0f)
 
 There is not much difference in write_requests/s, KB_written/s, write_requests_merged/s and write_await parameters.
+
