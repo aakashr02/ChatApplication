@@ -32,6 +32,12 @@ The performance of the servers before and after logging is as follows -
 
 
 ## Improvements to Disk IO
+
+The following methods are used to improve disk IO -
+1. Buffering - The logs are stored in a buffer before they are written to the log file. This ensures that the logs remain in main memory and not every thread accesses the log file.
+2. Periodic Logging - The logs in the buffer are logged only periodically, and this reduces the number of write operations done otherwise.
+3. Multithreading - A separate thread apart from the worker threads is dedicated to write logs. The worker threads focus on serving the client.
+
 The IOWait Percentage of the CPU was reduced by changing the values for the VM_Dirty_Ratio from system default value of 20 to new value of 60 and VM_Dirty_Background_Ratio from system default value of 10 to new value of 20.
 
 **Dirty Ratio** - permitted amount of dirty pages in memory after which the process will itself write it back to disk.
