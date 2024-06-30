@@ -4,13 +4,13 @@ Chat Application using Socket Programming in C
 The chat application is designed in the following 3 approaches.
 
 ### Approach 1 : Iterative Serving
-In this approach, the clients are served one after the other, as the requests arrive. The requests are drpped after a certain timeout if they are not handled. A separate thread keeps a check on the timeout for each of the clients in the queue and removes the client that have timed out. Another thread, picks clients from the queue in FIFO order and serves it.
+In this approach, the clients are served one after the other, as the requests arrive. The requests are dropped after a certain timeout if they are not handled. A separate thread keeps a check on the timeout for each of the clients in the queue and removes the client that have timed out. Another thread, picks clients from the queue in FIFO order and serves it.
 
 ### Approach 2 : MultiThreading
-In this approach, multiple clients are served simultaneously - a new thread is spawn for every new client. However, there is a cap set on the number of threads created (here MAX_THREADS is set to 16 as there are 16 cores). The other clients wait in the queue and are removed if the timeout is reached.
+In this approach, multiple clients are served simultaneously - a new thread is spawn for every new client. The other wait in the queue and are removed if the timeout is reached.
 
 ### Approach 3 : Forking
-In this approach, multiple clients are served simultaneously - a new child process is created for every new client. However, there is a cap set on the number of threads created (here MAX_PROCESSES is set to 16 as there are 16 cores). The other clients wait in the queue and are removed if the timeout is reached. 
+In this approach, multiple clients are served simultaneously - a new child process is created for every new client. The clients wait in the queue and are removed if the timeout is reached. 
 
 
 ## Performance before and after Logging (Disk IO)
