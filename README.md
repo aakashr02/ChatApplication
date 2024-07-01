@@ -70,5 +70,5 @@ There is not much difference in write_requests/s, KB_written/s, write_requests_m
 
 ## Load Testing
 
-Apache JMeter was used to load test the 3 approaches. The application was stressed with 900 Clients with a ramp up time of 0.5s. Each client sent and received 1000 messages in 1s. The iterative-server appraoch gave a low throughput of 3 Requests/s while the forking and multithreading approaches gave a throughput of 18-19 Requests/s. For more detailed results refer the 'Aggregate_JMeter_Results.xlsx' file.
+Apache JMeter was used to load test the 3 approaches. The application was stressed with 900 Clients and 2 Servers with a ramp up time of 0.5s. Each client sent and received 1000 messages in 1s. The iterative-server appraoch gave a low throughput of 3 Requests/s while the forking and multithreading approaches gave a throughput of 18-19 Requests/s. For more detailed results refer the 'Aggregate_JMeter_Results.xlsx' file.
 
